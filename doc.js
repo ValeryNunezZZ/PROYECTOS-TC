@@ -89,9 +89,9 @@ const imprimirResultadosSinBorrar = (setCaso) => {
 }
 
 
-leerArchivo('exampleUno.txt', setLenguajeUno, lenguajeUno);
-leerArchivo('exampleDos.txt', setLenguajeDos, lenguajeDos);
-leerArchivo('exampleTres.txt', setLenguajeTres, lenguajeTres);
+leerArchivo('tarea1.txt', setLenguajeUno, lenguajeUno);
+leerArchivo('tarea2.txt', setLenguajeDos, lenguajeDos);
+leerArchivo('tarea3.txt', setLenguajeTres, lenguajeTres);
 
 
 const union = (primero, segundo) => {
@@ -227,7 +227,7 @@ const imprimirConcatenarDos = (setCaso, setCasoDos) => {
 
     for(let value of setCaso){
         concatenacion += value;
-        if(pos < setCasoDos.size-1){
+        if(pos < setCaso.size-1){
             concatenacion += ", ";
         }
 
@@ -462,7 +462,7 @@ menuBotones[0].addEventListener("click", () => {
         }
         
 
-        if(lUState) primero = new Set(setLenguajeUno);
+        //if(lUState) primero = new Set(setLenguajeUno);
 
         
     }
@@ -513,13 +513,15 @@ menuBotones[1].addEventListener("click", () => {
             concatenar(primero, segundo);
             let aux = new Set(setResultante);
 
+            setResultante.clear();
+
             concatenar(segundo, primero);
 
             imprimirConcatenarDos(setResultante, aux);
         }
         
 
-        if(lUState) primero = new Set(setLenguajeUno);
+        //if(lUState) primero = new Set(setLenguajeUno);
 
         
     }
