@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main class="main_section">
+        <h1>Operaciones del Lenguaje</h1>
+        <div class="container_all">
+            <div class="lenguajes_container">
+                <h2>Lenguajes</h2>
+                <div class="lenguajes_opciones_textareas">
+                    <textarea class="lenguaje_uno"></textarea>
+                    <div>
+                        <input class="checkbox_Lenguajes" type="checkbox">
+                    </div>
+                </div>
+
+                <div class="lenguajes_opciones_textareas">
+                    <textarea class="lenguaje_dos"></textarea>
+                    <div>
+                        <input class="checkbox_Lenguajes" type="checkbox">
+                    </div>
+                </div>
+
+                <div class="lenguajes_opciones_textareas">
+                    <textarea class="lenguaje_tres"></textarea>
+                    <div>
+                        <input class="checkbox_Lenguajes" type="checkbox">
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="middle">
+                <div class="menu_container">
+                    <input class="menu_button" type="button" value="Unir">
+                    <input class="menu_button" type="button" value="Concatenar">
+                    <input class="menu_button" type="button" value="Cerradura (+)">
+                    <input class="menu_button" type="button" value="Cerradura (*)">
+                    <input class="menu_button" type="button" value="Reflexión">
+                    <input class="menu_button" type="button" value="Potencia">
+                    <input class="menu_input" type="number">
+                </div>
+                <div class="resultado_textarea">
+                    <textarea class="resTextArea"></textarea>
+                </div>
+            </div>
+
+            <div class="botones_container">
+                <input onclick="downloadFile()" type="button" value="DESCARGAR">
+            </div>
+        </div>
+    </main>
+
+    <script src="./doc.js"></script>
+</body>
+</html>

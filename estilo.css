@@ -1,0 +1,262 @@
+:root{
+    --padding-principal: 20px;
+    --gap-principal: 20px;
+    --gap-secundario: 15px;
+    --gap-botones: 10px;
+    --padding-botones-tb: 10px;
+    --padding-botones-rl: 10px;
+    --padding-inputs: 10px;
+
+    --padding-rezise: 10px;
+}   
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+
+    box-sizing: border-box;
+}
+
+/*ELEMENTOS PRINCIPALES*/
+
+h1{
+    color: pink;
+    text-align: center;
+}
+
+h2{
+    color: rgb(105, 35, 35);
+}
+
+textarea{
+    padding: var(--padding-inputs);
+    resize: none;
+
+    border-radius: 5px;
+}
+
+/*CONTENEDORES PRINCIPALES*/
+
+.main_section{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 30px;
+
+    background: linear-gradient(rgb(255, 130, 151), rgb(254, 155, 172), pink);
+}
+
+.container_all{
+    width: 70%;
+    max-width: 550px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-principal);
+    
+    background-color: rgba(255, 255, 255, 0.694);
+
+    border-radius: 10px;
+
+    padding: var(--padding-principal);
+}
+
+/*CONTENEDORES DE EJEMPLOS DEL LENGUAJE*/
+
+.lenguajes_container{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-secundario);
+}
+
+.lenguajes_opciones_textareas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.lenguajes_opciones_textareas input{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    appearance: none;
+    border: 1px solid black;
+    
+    width: 20px;
+    height: 20px;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked::after{
+    content: '✔️';
+
+    font-size: 9px;
+    
+}
+
+.lenguajes_opciones_textareas div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    gap: var(--gap-botones);
+
+    width: 10%;
+    min-width: 30px;
+}
+
+.lenguajes_container textarea{
+    display: block;
+    width: 100%;
+}
+
+/*BOTONES MENU Y TEXAREA RESULTANTE*/
+
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-principal);
+
+    width: 100%;
+}
+
+.resultado_textarea{
+    height: 100%;
+    width: 60%;
+}
+
+.resultado_textarea textarea{
+    height: 100%;
+    width: 100%;
+}
+
+/*CONTENEDOR DE BOTONES*/
+
+.menu_container{
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--gap-botones);
+}
+
+input[type=number]{
+    text-align: center;
+}
+
+.menu_container input{
+    width: 100%;
+
+    padding: var(--padding-botones-tb) var(--padding-botones-rl);
+}
+
+/*CONTENEDOR BOTONES FINALES*/
+
+.botones_container{
+    display: flex;
+    gap: var(--gap-botones);
+
+    width: 100%;
+}
+
+.botones_container input{
+    width: 100%;
+
+    padding: var(--padding-botones-tb) var(--padding-botones-rl);
+}
+
+/*BOTONES DISEÑO*/
+
+input[type=button]{
+    background-color: rgb(255, 131, 131);
+    border-radius: 5px;
+    color: white;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+input[type=button]:hover{
+    background-color: rgb(255, 79, 79);
+}
+
+.botones_container input[type=button]{
+    background-color: rgb(206, 106, 106);
+}
+
+input[type=button]:hover{
+    background-color: rgb(203, 63, 63);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Para Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.resultado_textarea{
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+
+    h1{
+        display: none;
+    }
+
+    input[type=button]{
+        font-size: 11px;
+    }
+
+    .container_all{
+        width: 90%;
+        max-width: 550px;
+        gap: var(--padding-rezise);
+    }
+
+    .lenguajes_container{
+        gap: var(--padding-rezise);
+    }
+
+    .middle{
+        gap: var(--padding-rezise);
+    }
+
+}
