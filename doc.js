@@ -89,9 +89,9 @@ const imprimirResultadosSinBorrar = (setCaso) => {
 }
 
 
-leerArchivo('tarea1.txt', setLenguajeUno, lenguajeUno);
-leerArchivo('tarea2.txt', setLenguajeDos, lenguajeDos);
-leerArchivo('tarea3.txt', setLenguajeTres, lenguajeTres);
+leerArchivo('exampleUno.txt', setLenguajeUno, lenguajeUno);
+leerArchivo('exampleDos.txt', setLenguajeDos, lenguajeDos);
+leerArchivo('exampleTres.txt', setLenguajeTres, lenguajeTres);
 
 
 const union = (primero, segundo) => {
@@ -179,9 +179,14 @@ const imprimirUnionUno = (setCaso) => {
 
     concatenacion += "A U B = { "
 
+    let pos = 0;
+
     for(let value of setCaso){
         concatenacion += value;
-        concatenacion += " ";
+        if(pos < setCaso.size-1){
+            concatenacion += ", ";
+        }
+        pos++;
     }
 
     concatenacion += " }"
