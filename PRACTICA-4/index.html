@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Document</title>
+</head>
+<body class="flex">
+    <main class="main_container flex">
+        <div class="left flex">
+            <div class="archivoContainer flex">
+                <!--<input type="file">-->
+                <label for="file-upload" class="file-label">Seleccionar archivo</label>
+                <pre id="contenidoArchivo"></pre>
+                <input type="file" id="file-upload" class="file-input">
+            </div>
+            
+            <div class="palabraContainer flex">
+                <input type="text" class="palabraAEvaluar" placeholder="Palabra a evaluar...">
+                <button class="botonEvaluar" type="button">Evaluar palabra</button>
+            </div>
+        </div>
+
+        <div class="right flex">
+            <div id="palabra">
+                <p>Esperando palabra...</p>
+            </div>
+            
+            <div class="piolin">
+                <img src="./img/piolin-imagen-animada-0085.gif">
+            </div>
+        </div>
+    </main>
+
+    <script src="./doc.js"></script>
+</body>
+</html>
